@@ -1,0 +1,4 @@
+this is a completely baloney test app that should be ignored. 
+
+the purpose of it is simply to get an app working on heroku (via
+postgre sql). 
