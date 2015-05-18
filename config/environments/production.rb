@@ -76,4 +76,25 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #this and below are for the mailer settings 
+  config.action_mailer.default_url_options = { :host => 'sheltered-atoll-3434.herokuapp.com' }
+
+
+  #These settings are for the sending out email for active admin and consequently the   devise mailer
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+
+    :address            => 'smtp.yahoo.com',
+    :port               => 587,
+    :domain             => 'yahoo.com', #you can also use google.com
+    :authentication     => :plain,
+    :user_name          => 'jrghoull147@yahoo.com',
+    :password           => 'zoomy_14256565656'
+  }
+
 end
